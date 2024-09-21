@@ -1,0 +1,121 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    font-size: 3em;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    /* text-align: center; */
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+.nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    /* margin-left: auto; */
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+#section1 {
+    background: #f12711;
+    background: linear-gradient(to right, #f5af19, #f12711);
+    color: white;
+}
+
+#section2 {
+    background: #c2e59c;
+    background: linear-gradient(to right, #64b3f4, #c2e59c);
+    color: white;
+}
+
+#section3 {
+    background: #00c6ff;
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    color: white;
+}
+
+#section4 {
+    background: #ff6e7f;
+    background: linear-gradient(to right, #bfe9ff, #ff6e7f);
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.section h2 {
+    font-size: 2.5em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.section p {
+    font-size: 1.2em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Smooth scroll effect */
+.nav a:hover {
+    color: #f12711;
+}
+
+/* Reveal sections on scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
